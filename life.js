@@ -148,6 +148,11 @@ canvas.addEventListener('mousemove', function (event) {
 });
 
 
+canvas.addEventListener("touchstart", function(event) {
+    const clickedCell = getCell(event)
+    isDrawingUser = !_.isUndefined(clickedCell)
+});
+
 canvas.addEventListener('mouseout', function (event) {
     isDrawingUser = false;
 
